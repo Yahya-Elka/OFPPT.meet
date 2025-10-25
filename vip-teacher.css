@@ -126,7 +126,12 @@ label{
     color: #0F1524;
     cursor: pointer;
 }
-
+.dev{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 14px;
+    color: gray;
+}
 
 @media (min-width: 601px) and (max-width: 900px){
 
