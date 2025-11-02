@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIP</title>
+    <title>VIP - Student</title>
     <link rel="stylesheet" href="vip-student.css">
 </head>
 <body>
@@ -17,42 +17,77 @@
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
+
     <div class="flex">
         <div class="form">
-        <form  action="https://wa.me/212714494648?text=Hello%20support%20i'm%20a%20new%20Student">
-            <h1 style="text-shadow: 1px 1px 3px black;">Student Form</h1>
-            <input class="inp" type="text" placeholder="Full Name" required>
-            <br>
-            <input class="inp" type="email" placeholder="E-mail" required>
-            <br>
-            <select class="" name="niveau" id="niveau">
-                <option value="level">Level</option>
-                <option value="1er annee">1er annee</option>
-                <option value="2eme annee">2eme annee</option>
-            </select>
-            <br>
-            <select class="" name="filier" id="filier">
-                <option value="level">Filier</option>
-                <option value="Development-Digital">Development Digital</option>
-                <option value="Cyber-Security">Cyber Security</option>
-                <option value="Intelligence-Artificial">Intelligence Artificial</option>
-                <option value="Resau-Informatique">Resau Informatique</option>
-                <option value="Genie-Elictrique">Genie Elictrique</option>
-                <option value="Genie-Mecanique">Genie Mecanique</option>
-            </select>
-            <br>
-            <input class="inp" type="tel" placeholder="Number Phone" requird>
-            <br>
-            <input type="checkbox" id="chek" required>
-            <label for="chek">I Agree with privacy and policy</label>
-            <br><br>
-            <input class="send" type="submit" value="Send">
+            <form id="studentForm">
+                <h1 style="text-shadow: 1px 1px 3px black;">Student Form</h1>
 
+                <input class="inp" type="text" placeholder="Full Name" name="name" id="name" required>
+                <br>
+                <input class="inp" type="email" placeholder="E-mail" name="email" id="email" required>
+                <br>
 
+                <select name="niveau" id="niveau" required>
+                    <option value="">Select Level</option>
+                    <option value="1er annee">1er annee</option>
+                    <option value="2eme annee">2eme annee</option>
+                </select>
+                <br>
 
-        </form>
+                <select name="filier" id="filier" required>
+                    <option value="">Select Filier</option>
+                    <option value="Development-Digital">Development Digital</option>
+                    <option value="Cyber-Security">Cyber Security</option>
+                    <option value="Intelligence-Artificial">Intelligence Artificial</option>
+                    <option value="Resau-Informatique">Resau Informatique</option>
+                    <option value="Genie-Elictrique">Genie Elictrique</option>
+                    <option value="Genie-Mecanique">Genie Mecanique</option>
+                </select>
+                <br>
+
+                <input class="inp" type="tel" placeholder="Number Phone" name="phone" id="phone" required>
+                <br>
+                <input class="inp" type="text" placeholder="Discord Name" name="discord" id="discord" required>
+                <br>
+
+                <input type="checkbox" id="chek" required>
+                <label for="chek">I Agree with privacy and policy</label>
+                <br><br>
+
+                <button class="send" type="submit">Send</button>
+            </form>
+        </div>
     </div>
-    </div>
-    <p class="dev">Devloped by Yahya El Kasmi</p>
+
+    <p class="dev">Developed by Yahya El Kasmi</p>
+
+    <script>
+document.querySelector("#studentForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const niveau = document.getElementById("niveau").value;
+  const filier = document.getElementById("filier").value;
+  const phone = document.getElementById("phone").value;
+  const discord = document.getElementById("discord").value;
+
+  // رابط WhatsApp
+  const waNumber = "212714494648"; // رقمك
+  const message = `New Student:\nName: ${name}\nEmail: ${email}\nNiveau: ${niveau}\nFilier: ${filier}\nPhone: ${phone}\nDiscord: ${discord}`;
+
+  // فتح نافذة WhatsApp
+  window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, "_blank");
+
+  alert("les a ete envoyer");
+  e.target.reset();
+});
+</script>
+
+
+
+
 </body>
 </html>
+

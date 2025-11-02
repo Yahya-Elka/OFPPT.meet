@@ -19,19 +19,19 @@
     </nav>
     <div class="flex">
         <div class="form">
-        <form target="_blank" action="https://wa.me/212714494648?text=Hello%20support%20i'm%20a%20new%20Teacher">
+        <form id="teacherForm">
             <h1 style="text-shadow: 1px 1px 3px black;">Teacer Form</h1>
-            <input class="inp" type="text" placeholder="Full Name">
+            <input class="inp" type="text" placeholder="Full Name" name="name" id="name">
             <br>
-            <input class="inp" type="email" placeholder="E-mail">
+            <input class="inp" type="email" placeholder="E-mail" name="email" id="email">
             <br>
-            <select class="" name="niveau" id="niveau">
+            <select class="" name="niveau" id="niveau" name="niveau">
                 <option value="level">Level</option>
                 <option value="2eme annee">2eme annee</option>
                 <option value="deplomente">Deplomente</option>
             </select>
             <br>
-            <select class="" name="filier" id="filier">
+            <select class="" name="filier" id="filier" name="filier">
                 <option value="level">Filier</option>
                 <option value="Development-Digital">Development Digital</option>
                 <option value="Cyber-Security">Cyber Security</option>
@@ -41,17 +41,41 @@
                 <option value="Genie-Mecanique">Genie Mecanique</option>
             </select>
             <br>
-            <input class="inp" type="tel" placeholder="Number Phone" required>
+            <input class="inp" type="tel" placeholder="Number Phone" id="phone" name="phone" required>
             <br>
-            <input class="inp" type="text" placeholder="Discord Name" required>
+            <input class="inp" type="text" placeholder="Discord Name" name="discord"  required id="discord">
             <br>
             <input type="checkbox" id="chek" required>
             <label for="chek">I Agree with privacy and policy</label>
             <br>
-            <input class="send" type="submit" value="Send">
+            <button class="send"  type="submit">Send</button>
         </form>
     </div>
     </div>
     <p class="dev">Devloped by Yahya El Kasmi</p>
+
+    <script>
+document.querySelector("#teacherForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const niveau = document.getElementById("niveau").value;
+  const filier = document.getElementById("filier").value;
+  const phone = document.getElementById("phone").value;
+  const discord = document.getElementById("discord").value;
+
+  // رابط WhatsApp
+  const waNumber = "212714494648"; // رقمك
+  const message = `New Teacher:\nName: ${name}\nEmail: ${email}\nNiveau: ${niveau}\nFilier: ${filier}\nPhone: ${phone}\nDiscord: ${discord}`;
+
+  // فتح نافذة WhatsApp
+  window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, "_blank");
+
+  alert("les a ete envoyer");
+  e.target.reset();
+});
+</script>
+    
 </body>
 </html>
