@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(255, 255, 88);
+        }
+        .name{
+            border-top:1px solid rgb(255, 217, 0) ;
+            border-bottom: 1px solid rgb(255, 217, 0) ;
+            margin-bottom: 5px;
+        }
+        .name h1{
+            text-align: center;
+            color: rgb(0, 0, 100);
+        }
+        .name pre{
+            
+            font-style: italic;
+        }
+        .inp {
+            background-color:rgb(255, 255, 28);
+            border-radius: 5px;
+            
+        }
+        .inp input{
+            display: block;
+           background-color: rgb(255, 255, 88) ;
+           border: 1px solid rgb(255, 217, 0) ;
+           border-radius: 5px;
+        }
+        .inp .text{
+            margin: auto;
+        }
+        .text::placeholder{
+            color: rgb(0, 0, 100);
+            font-size: 12px;
+        }
+        .inp .date{
+            width: 500px;
+            margin: auto;
+            margin-right: 107px;
+        }
+        .inp .time{
+            margin: auto;
+            margin-left: 370px;
+        }
+        .inp .submit{
+            margin: auto;
+            margin-left: 606px;
+            background-color: rgb(255, 229, 79);
+            margin-bottom: 5px;
+        }
+        .hr{
+            border-bottom: 1px solid rgb(255, 217, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="name">
+        <h1>Student Name</h1>
+        <pre>hi there my name is yahya and i study programmingher
+in <i>dar fonon</i> i am learnign <mark>HTML and CSS</mark> at the moment and then i will
+start learnign<del>JavaScript</del>
+        </pre>
+    </div>
+    <div class="inp">
+        <form>
+        <input class="text" type="text" placeholder="entre your name" required>
+        <input class="text" type="number" placeholder="entre your phone number" required>
+        <input class="text" type="email" placeholder="entre your email"required>
+        <input class="date" type="date">
+        <input class="time" type="time">
+        <input class="submit" type="submit">
+        </form>
+    </div>
+    <div class="hr"></div>
+</body>
+</html>
