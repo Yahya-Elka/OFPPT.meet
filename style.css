@@ -140,14 +140,17 @@ input, textarea{
     padding-left: 15px;
     color: white;
 }
+textarea{
+    padding-top: 15px;
+}
 input::placeholder{
     color: white;
-    padding-left: 15px ;
+    padding-left: 17px ;
     font-size: 14px;
 }
 textarea::placeholder{
     padding-left: 15px;
-    padding-top: 15px;
+    padding-top: 0px;
     color: white;
     font-size: 16px;
 }
@@ -190,20 +193,10 @@ footer{
     margin: auto;
 }
 .dev p{
-    text-align: right;
-    margin-right: 20px;
-    font-size: 14px;
-    display: inline-block;
-}
-.dev a{
     text-align: left;
     margin-right: 20px;
-    margin-left: 20px;
-    color: white;
-    font-weight: bold;
     font-size: 14px;
     display: inline-block;
-    text-decoration: none;
 }
 
 @media (min-width: 601px) and (max-width: 900px){
